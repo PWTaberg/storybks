@@ -26,4 +26,4 @@ const GoogleUserSchema = new Schema({
 
 // Create collection and add schema
 // Change to users or google_users
-mongoose.model('google_users', GoogleUserSchema); 
+mongoose.model('google_users', GoogleUserSchema);

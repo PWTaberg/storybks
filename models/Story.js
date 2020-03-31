@@ -20,20 +20,22 @@ const StorySchema = new Schema({
     type: Boolean,
     default: true
   },
-  comments: [{
-    commentBody: {
-      type: String,
-      required: true
-    },
-    commentDate: {
-      type: Date,
-      default: Date.now
-    },
-    commentUser: {
-      type: Schema.Types.ObjectId,
-      ref: 'google_users'
+  comments: [
+    {
+      commentBody: {
+        type: String,
+        required: true
+      },
+      commentDate: {
+        type: Date,
+        default: Date.now
+      },
+      commentUser: {
+        type: Schema.Types.ObjectId,
+        ref: 'google_users'
+      }
     }
-  }],
+  ],
   user: {
     type: Schema.Types.ObjectId,
     ref: 'google_users'
@@ -46,4 +48,4 @@ const StorySchema = new Schema({
 
 // Create collection and add schema
 // Third param gives collection name
-mongoose.model('stories', StorySchema, 'stories'); 
+mongoose.model('stories', StorySchema, 'stories');
